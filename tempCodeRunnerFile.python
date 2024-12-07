@@ -1,0 +1,5 @@
+import chardet
+with open("all_packages.txt", "rb") as f:
+    raw_data = f.read()
+    result = chardet.detect(raw_data)
+    print(f"Detected encoding: {result['encoding']}")
